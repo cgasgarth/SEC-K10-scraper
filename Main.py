@@ -71,5 +71,5 @@ missedStocks = ErrorChecker.checkMissing(stockList, './sec-edgar-filings')
 for i in missedStocks:
     print(i.return_ipo_name())
 print(len(missedStocks))
-Organizer.rename('./TestFiles/')  # renames downloaded files to include company name
-Organizer.moveFiles('./testFiles/', './TestMove/') # moves downloaded files to one director
+Organizer.rename('./sec-edgar-filings/')  # renames downloaded files to include company name
+Organizer.moveFiles('./sec-edgar-filings/', './Collective/') # moves downloaded files to one director

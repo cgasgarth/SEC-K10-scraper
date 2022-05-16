@@ -1,7 +1,5 @@
 import os
-from StockClass import Stock
-from sedScraper import Scraper
-import shutil
+
 class Organizer:
     def getYear(folderName):
         stringSplit = folderName.split('-')
@@ -41,7 +39,3 @@ class Organizer:
                     year = Organizer.getYear(y)
                     fileName = i + "-" + x + "-" + year + '.html'
                     os.rename(path + fileName, destinationDir + fileName)
-
-
-
-# print(Organizer.getYear('0001621832-20-000036'))

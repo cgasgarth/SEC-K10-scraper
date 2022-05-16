@@ -1,6 +1,4 @@
 import os
-from StockClass import Stock
-from sedScraper import Scraper
 from openpyxl import *
 
 class ErrorChecker:
@@ -28,24 +26,3 @@ class ErrorChecker:
             if i.return_ipo_name().upper() not in folder:
                 missedStocks.append(i)
         return missedStocks
-
-# def takeAll():
-#     stockList = []
-#     row = 3
-#     while(sheet["A"+str(row)].value!=0):
-#         newStock = Stock(sheet["A"+str(row)].value, sheet["B"+str(row)].value, sheet["C"+str(row)].value,
-#         sheet["D"+str(row)].value, sheet["E"+str(row)].value, sheet["F"+str(row)].value,
-#         sheet["G"+str(row)].value, sheet["H"+str(row)].value, sheet["I"+str(row)].value,
-#         sheet["L"+str(row)].value, sheet["M"+str(row)].value)
-#         stockList.append(newStock)
-#         row += 1
-#     return stockList
-# workbook = load_workbook(filename="StocksInfo.xlsx")
-# print(workbook.sheetnames)
-# sheet = workbook.active
-# print(sheet)
-# stockList = takeAll()
-# missingStocks = ErrorChecker.checkMissingTest(stockList, './sec-edgar-filings')
-# print('----------------------------------------------')
-# for i in missingStocks:
-#     print(i.return_ipo_name().upper())
